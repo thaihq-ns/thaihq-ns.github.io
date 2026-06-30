@@ -1,447 +1,372 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ho Quoc Thai | Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --bg: #0f172a;
-      --card: rgba(15, 23, 42, 0.82);
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-      --primary: #38bdf8;
-      --secondary: #818cf8;
-      --border: rgba(148, 163, 184, 0.25);
-      --white: #ffffff;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.22), transparent 35%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-      padding: 36px 0;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0 42px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-    }
-
-    .logo span {
-      color: var(--primary);
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
-      align-items: center;
-      min-height: 68vh;
-    }
-
-    .hero-card,
-    .profile-card,
-    .section-card {
-      border: 1px solid var(--border);
-      background: var(--card);
-      backdrop-filter: blur(16px);
-      border-radius: 28px;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-    }
-
-    .hero-card {
-      padding: 46px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-radius: 999px;
-      color: var(--primary);
-      background: rgba(56, 189, 248, 0.08);
-      font-size: 14px;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 72px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    h1 span {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .intro {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 680px;
-      margin-bottom: 30px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .btn.primary {
-      color: #020617;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-    }
-
-    .btn.secondary {
-      color: var(--text);
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .profile-card {
-      padding: 30px;
-      text-align: center;
-    }
-
-    .avatar {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 22px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #020617;
-      font-size: 56px;
-      font-weight: 900;
-      border: 6px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .profile-card h2 {
-      font-size: 26px;
-      margin-bottom: 8px;
-    }
-
-    .profile-card p {
-      color: var(--muted);
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .stat {
-      padding: 14px 10px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--white);
-      font-size: 22px;
-    }
-
-    .stat span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    section {
-      margin-top: 32px;
-    }
-
-    .section-card {
-      padding: 34px;
-    }
-
-    .section-title {
-      font-size: 30px;
-      margin-bottom: 16px;
-    }
-
-    .section-desc {
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .item {
-      padding: 22px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .item h3 {
-      font-size: 19px;
-      margin-bottom: 8px;
-      color: var(--white);
-    }
-
-    .item p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skills span {
-      padding: 10px 15px;
-      border-radius: 999px;
-      color: var(--text);
-      background: rgba(56, 189, 248, 0.09);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      font-size: 15px;
-    }
-
-    .contact {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .contact a {
-      padding: 20px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--muted);
-      transition: 0.2s ease;
-    }
-
-    .contact a:hover {
-      color: var(--primary);
-      transform: translateY(-2px);
-    }
-
-    footer {
-      color: var(--muted);
-      text-align: center;
-      padding: 34px 0 10px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 860px) {
-      header {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card {
-        padding: 32px;
-      }
-
-      .grid,
-      .contact {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  </style>
+  <meta name="description" content="Ho Quoc Thai - Network Security Student, SOC Analyst in Training, CTF Player. Cybersecurity portfolio for SOC analysis, threat detection, digital forensics, CTF write-ups, and practical labs." />
+  <meta name="author" content="Ho Quoc Thai" />
+  <meta name="theme-color" content="#071018" />
+  <title>Ho Quoc Thai | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="logo">thaihq<span>-ns</span></div>
-      <nav>
-        <a href="#about">Giới thiệu</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#projects">Dự án</a>
-        <a href="#contact">Liên hệ</a>
-      </nav>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <main>
-      <div class="hero">
-        <div class="hero-card">
-          <div class="tag">👋 Xin chào, chào mừng đến với website của mình</div>
-          <h1>Mình là <span>Hồ Quốc Thái</span></h1>
-          <p class="intro">
-            Mình yêu thích công nghệ, lập trình web, an toàn thông tin và các thử thách CTF.
-            Đây là trang cá nhân dùng để giới thiệu bản thân, kỹ năng và những dự án mình đang thực hiện.
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#top" class="logo" aria-label="Ho Quoc Thai home">
+        <span class="logo-mark">HQT</span>
+        <span class="logo-text">Ho Quoc Thai</span>
+      </a>
+
+      <div class="nav-actions" aria-label="Display controls">
+        <button class="control-btn theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-text" data-i18n="control.themeDark">Dark</span>
+        </button>
+
+        <button class="control-btn lang-toggle" type="button" aria-label="Switch language" aria-pressed="false">
+          <span class="lang-current">EN</span>
+        </button>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#writeups" data-i18n="nav.writeups">Write-ups</a></li>
+        <li><a href="#notes" data-i18n="nav.notes">Notes</a></li>
+        <li><a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-padding" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Cybersecurity Portfolio</p>
+          <h1 id="hero-title" data-i18n-html="hero.title">Hi, I'm <span>Ho Quoc Thai</span></h1>
+          <h2 data-i18n="hero.role">Network Security Student | SOC Analyst in Training | CTF Player</h2>
+          <p class="hero-description" data-i18n="hero.description">
+            I am a cybersecurity learner focusing on SOC analysis, log investigation, threat detection, and hands-on security labs.
           </p>
 
-          <div class="actions">
-            <a class="btn primary" href="#projects">Xem dự án</a>
-            <a class="btn secondary" href="#contact">Liên hệ với mình</a>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
+            <a href="#writeups" class="btn btn-secondary" data-i18n="hero.readWriteups">Read Write-ups</a>
+          </div>
+
+          <div class="hero-metrics" aria-label="Portfolio focus areas">
+            <div>
+              <strong>SOC</strong>
+              <span data-i18n="hero.metric1">Alert triage</span>
+            </div>
+            <div>
+              <strong>SIEM</strong>
+              <span data-i18n="hero.metric2">Wazuh labs</span>
+            </div>
+            <div>
+              <strong>CTF</strong>
+              <span data-i18n="hero.metric3">Write-ups</span>
+            </div>
           </div>
         </div>
 
-        <aside class="profile-card">
-          <div class="avatar">K</div>
-          <h2>Hồ Quốc Thái</h2>
-          <p>Sinh viên yêu thích lập trình và an toàn thông tin</p>
-
-          <div class="stats">
-            <div class="stat">
-              <strong>Web</strong>
-              <span>HTML/CSS</span>
-            </div>
-            <div class="stat">
-              <strong>CTF</strong>
-              <span>Security</span>
-            </div>
-            <div class="stat">
-              <strong>Git</strong>
-              <span>GitHub</span>
-            </div>
+        <aside class="terminal-card reveal" aria-label="Terminal style cybersecurity activity log">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">soc-lab@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line1">Analyzing logs...</span></p>
+            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line2">Mapping alerts to MITRE ATT&CK...</span></p>
+            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line3">Investigating suspicious PowerShell activity...</span></p>
+            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line4">Building detection rules...</span></p>
+            <p class="cursor-line"><span class="prompt">&gt;</span> <span id="typing-text">Monitoring suspicious events</span><span class="cursor">_</span></p>
           </div>
         </aside>
       </div>
+    </section>
 
-      <section id="about">
-        <div class="section-card">
-          <h2 class="section-title">Giới thiệu</h2>
-          <p class="section-desc">
-            Mình đang học và rèn luyện các kỹ năng về lập trình, thiết kế giao diện website,
-            bảo mật cơ bản và tư duy giải quyết vấn đề. Mục tiêu của mình là xây dựng được
-            nhiều sản phẩm thực tế và phát triển kỹ năng chuyên môn trong lĩnh vực công nghệ.
+    <section class="about section-padding" id="about" aria-labelledby="about-title">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+          <h2 id="about-title" data-i18n="about.title">Focused on practical security investigation</h2>
+        </div>
+
+        <div class="about-content reveal">
+          <p data-i18n="about.p1">
+            I am a network security student currently training to become a SOC Analyst. My learning path focuses on analyzing security events, investigating logs, understanding attacker techniques, and building practical detection skills through labs, CTFs, and real-world security scenarios.
           </p>
-        </div>
-      </section>
+          <p data-i18n="about.p2">
+            I enjoy learning by doing: building labs, solving CTF challenges, writing reports, documenting findings, and improving my ability to investigate security incidents.
+          </p>
 
-      <section id="skills">
-        <div class="section-card">
-          <h2 class="section-title">Kỹ năng</h2>
-          <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>CTF</span>
-            <span>Linux cơ bản</span>
+          <div class="about-tags" aria-label="Main cybersecurity interests">
+            <span data-i18n="about.tag1">Threat Detection</span>
+            <span data-i18n="about.tag2">Log Investigation</span>
+            <span data-i18n="about.tag3">Digital Forensics</span>
+            <span data-i18n="about.tag4">Security Labs</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="projects">
-        <div class="section-card">
-          <h2 class="section-title">Dự án</h2>
-          <p class="section-desc">Một số nội dung mình có thể cập nhật lên website cá nhân.</p>
-
-          <div class="grid">
-            <div class="item">
-              <h3>Portfolio cá nhân</h3>
-              <p>Website giới thiệu bản thân, kỹ năng, thông tin liên hệ và định hướng học tập.</p>
-            </div>
-
-            <div class="item">
-              <h3>Write-up CTF</h3>
-              <p>Tổng hợp các bài phân tích, hướng giải và kinh nghiệm khi làm các thử thách CTF.</p>
-            </div>
-
-            <div class="item">
-              <h3>Project học tập</h3>
-              <p>Các bài tập, sản phẩm nhỏ và dự án cá nhân trong quá trình học công nghệ.</p>
-            </div>
-          </div>
+    <section class="skills section-padding" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+          <h2 id="skills-title" data-i18n="skills.title">Technical skill areas</h2>
+          <p data-i18n="skills.subtitle">Organized around SOC work, operating system fundamentals, security practice, and tools.</p>
         </div>
-      </section>
 
-      <section id="contact">
-        <div class="section-card">
-          <h2 class="section-title">Liên hệ</h2>
-          <p class="section-desc">Bạn có thể chỉnh lại các đường dẫn bên dưới theo thông tin thật của bạn.</p>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="card-icon">01</div>
+            <h3 data-i18n="skills.socTitle">SOC & Blue Team</h3>
+            <ul>
+              <li data-i18n="skills.soc1">Log analysis</li>
+              <li data-i18n="skills.soc2">Alert triage</li>
+              <li data-i18n="skills.soc3">Incident investigation</li>
+              <li>Wazuh SIEM</li>
+              <li>MITRE ATT&amp;CK</li>
+              <li>IOC analysis</li>
+              <li data-i18n="skills.soc7">Detection logic</li>
+            </ul>
+          </article>
 
-          <div class="contact">
-            <a href="https://github.com/thaihq-ns" target="_blank">GitHub: thaihq-ns</a>
-            <a href="mailto:your-email@gmail.com">Email: your-email@gmail.com</a>
-            <a href="#" target="_blank">Facebook: thêm link của bạn</a>
-          </div>
+          <article class="skill-card reveal">
+            <div class="card-icon">02</div>
+            <h3 data-i18n="skills.osTitle">Operating Systems</h3>
+            <ul>
+              <li data-i18n="skills.os1">Windows logs</li>
+              <li data-i18n="skills.os2">Linux logs</li>
+              <li data-i18n="skills.os3">PowerShell basics</li>
+              <li data-i18n="skills.os4">Bash basics</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="card-icon">03</div>
+            <h3 data-i18n="skills.practiceTitle">Security Practice</h3>
+            <ul>
+              <li>OSINT</li>
+              <li data-i18n="skills.practice2">Digital forensics</li>
+              <li data-i18n="skills.practice3">Web security testing</li>
+              <li data-i18n="skills.practice4">Basic malware analysis</li>
+              <li data-i18n="skills.practice5">CTF problem solving</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="card-icon">04</div>
+            <h3 data-i18n="skills.toolsTitle">Tools</h3>
+            <ul>
+              <li>Wazuh</li>
+              <li>Burp Suite</li>
+              <li>Nmap</li>
+              <li>Wireshark</li>
+              <li>Sysmon</li>
+              <li>Linux CLI</li>
+              <li>GitHub</li>
+            </ul>
+          </article>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      © 2026 Ho Quoc Thai. All rights reserved.
-    </footer>
-  </div>
+    <section class="projects section-padding" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="projects.eyebrow">Projects</p>
+          <h2 id="projects-title" data-i18n="projects.title">Hands-on cybersecurity projects</h2>
+          <p data-i18n="projects.subtitle">Practical labs and documentation focused on investigation, detection, and evidence-based analysis.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="status-dot"></span>
+              <span data-i18n="projects.p1Type">Blue Team Lab</span>
+            </div>
+            <h3 data-i18n="projects.p1Title">SOC Alert Investigation Lab</h3>
+            <p data-i18n="projects.p1Desc">A hands-on lab focused on analyzing security alerts, reviewing logs, identifying suspicious behavior, and classifying alerts as false positive or true positive.</p>
+            <div class="tags">
+              <span>SOC</span>
+              <span>Wazuh</span>
+              <span>Log Analysis</span>
+              <span>MITRE ATT&amp;CK</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="status-dot"></span>
+              <span data-i18n="projects.p2Type">Windows Security</span>
+            </div>
+            <h3 data-i18n="projects.p2Title">Windows Log Analysis with Sysmon</h3>
+            <p data-i18n="projects.p2Desc">A practical project for collecting and analyzing Windows event logs using Sysmon to detect suspicious PowerShell execution, process creation, and file activity.</p>
+            <div class="tags">
+              <span>Windows Security</span>
+              <span>Sysmon</span>
+              <span>PowerShell</span>
+              <span>Threat Detection</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="status-dot"></span>
+              <span data-i18n="projects.p3Type">Documentation</span>
+            </div>
+            <h3 data-i18n="projects.p3Title">CTF Write-ups Collection</h3>
+            <p data-i18n="projects.p3Desc">A collection of CTF write-ups covering web exploitation, forensics, OSINT, reversing basics, and security problem-solving methodology.</p>
+            <div class="tags">
+              <span>CTF</span>
+              <span>Web Security</span>
+              <span>Forensics</span>
+              <span>OSINT</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-topline">
+              <span class="status-dot"></span>
+              <span data-i18n="projects.p4Type">Malware Basics</span>
+            </div>
+            <h3 data-i18n="projects.p4Title">Malware Behavior Analysis Notes</h3>
+            <p data-i18n="projects.p4Desc">Basic malware analysis notes documenting suspicious behaviors such as persistence, registry modification, command execution, and network indicators.</p>
+            <div class="tags">
+              <span>Malware Analysis</span>
+              <span>IOC</span>
+              <span>Registry</span>
+              <span>Sandbox</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="writeups section-padding" id="writeups" aria-labelledby="writeups-title">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow" data-i18n="writeups.eyebrow">CTF Write-ups</p>
+          <h2 id="writeups-title" data-i18n="writeups.title">Challenge notes and solving methodology</h2>
+          <p data-i18n="writeups.subtitle">Blog-style cards for documenting the problem, evidence, exploitation path, and lessons learned.</p>
+        </div>
+
+        <div class="writeup-grid">
+          <article class="writeup-card reveal">
+            <span class="category" data-i18n="writeups.c1Cat">Web Exploitation</span>
+            <h3 data-i18n="writeups.c1Title">File Upload Vulnerability Lab</h3>
+            <p class="difficulty" data-i18n="writeups.easy">Difficulty: Easy</p>
+            <p data-i18n="writeups.c1Desc">Analyzing weak upload validation, identifying execution paths, and documenting controlled exploitation steps.</p>
+            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
+          </article>
+
+          <article class="writeup-card reveal">
+            <span class="category" data-i18n="writeups.c2Cat">Digital Forensics</span>
+            <h3 data-i18n="writeups.c2Title">Windows Registry Investigation</h3>
+            <p class="difficulty" data-i18n="writeups.medium">Difficulty: Medium</p>
+            <p data-i18n="writeups.c2Desc">Reviewing registry artifacts, deleted traces, persistence indicators, and evidence extraction workflow.</p>
+            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
+          </article>
+
+          <article class="writeup-card reveal">
+            <span class="category">OSINT</span>
+            <h3 data-i18n="writeups.c3Title">Public Source Investigation</h3>
+            <p class="difficulty" data-i18n="writeups.easy">Difficulty: Easy</p>
+            <p data-i18n="writeups.c3Desc">Using public metadata, visible clues, and structured search methods without crossing privacy boundaries.</p>
+            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
+          </article>
+
+          <article class="writeup-card reveal">
+            <span class="category" data-i18n="writeups.c4Cat">Reverse Engineering</span>
+            <h3 data-i18n="writeups.c4Title">Basic Binary Analysis</h3>
+            <p class="difficulty" data-i18n="writeups.medium">Difficulty: Medium</p>
+            <p data-i18n="writeups.c4Desc">Reading program behavior, identifying strings, checking file formats, and building a repeatable analysis process.</p>
+            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes section-padding" id="notes" aria-labelledby="notes-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="notes.eyebrow">Security Notes</p>
+          <h2 id="notes-title" data-i18n="notes.title">Short technical references</h2>
+          <p data-i18n="notes.subtitle">Concise notes for concepts, commands, detection logic, and investigation workflows.</p>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card reveal"><span>01</span><h3 data-i18n="notes.n1">PowerShell suspicious behavior</h3></article>
+          <article class="note-card reveal"><span>02</span><h3 data-i18n="notes.n2">WMI Event Subscription</h3></article>
+          <article class="note-card reveal"><span>03</span><h3 data-i18n="notes.n3">PsExec-like remote execution</h3></article>
+          <article class="note-card reveal"><span>04</span><h3 data-i18n="notes.n4">Registry persistence</h3></article>
+          <article class="note-card reveal"><span>05</span><h3 data-i18n="notes.n5">Wazuh decoder and rule writing</h3></article>
+          <article class="note-card reveal"><span>06</span><h3 data-i18n="notes.n6">MITRE ATT&CK mapping</h3></article>
+          <article class="note-card reveal"><span>07</span><h3 data-i18n="notes.n7">IOC investigation workflow</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap section-padding" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow" data-i18n="roadmap.eyebrow">Learning Roadmap</p>
+          <h2 id="roadmap-title" data-i18n="roadmap.title">Cybersecurity learning path</h2>
+          <p data-i18n="roadmap.subtitle">A practical path toward SOC analysis, detection engineering fundamentals, and stronger portfolio documentation.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal"><span>01</span><p data-i18n="roadmap.s1">Networking fundamentals</p></article>
+          <article class="timeline-item reveal"><span>02</span><p data-i18n="roadmap.s2">Linux and Windows fundamentals</p></article>
+          <article class="timeline-item reveal"><span>03</span><p data-i18n="roadmap.s3">Log analysis and SIEM basics</p></article>
+          <article class="timeline-item reveal"><span>04</span><p data-i18n="roadmap.s4">SOC alert triage</p></article>
+          <article class="timeline-item reveal"><span>05</span><p data-i18n="roadmap.s5">MITRE ATT&CK and threat detection</p></article>
+          <article class="timeline-item reveal"><span>06</span><p data-i18n="roadmap.s6">Digital forensics and malware basics</p></article>
+          <article class="timeline-item reveal"><span>07</span><p data-i18n="roadmap.s7">CTF practice and project documentation</p></article>
+          <article class="timeline-item reveal"><span>08</span><p data-i18n="roadmap.s8">Build a strong SOC Analyst portfolio</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-padding" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-card reveal">
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+        <h2 id="contact-title" data-i18n="contact.title">Connect and collaborate</h2>
+        <p data-i18n="contact.subtitle">For projects, write-ups, labs, and cybersecurity learning documentation.</p>
+
+        <div class="contact-links">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub: github.com/yourusername</a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn: linkedin.com/in/yourusername</a>
+          <a href="mailto:your.email@example.com">Email: your.email@example.com</a>
+        </div>
+
+        <p class="closing-line" data-i18n="contact.closing">Always learning. Always investigating. Always improving.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Ho Quoc Thai. <span data-i18n="footer.rights">Cybersecurity portfolio.</span></p>
+      <a href="#top" data-i18n="footer.backTop">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
