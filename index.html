@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ho Quoc Thai | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f172a;
+      --card: rgba(15, 23, 42, 0.82);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --primary: #38bdf8;
+      --secondary: #818cf8;
+      --border: rgba(148, 163, 184, 0.25);
+      --white: #ffffff;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.22), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+      padding: 36px 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0 42px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+      min-height: 68vh;
+    }
+
+    .hero-card,
+    .profile-card,
+    .section-card {
+      border: 1px solid var(--border);
+      background: var(--card);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-card {
+      padding: 46px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 999px;
+      color: var(--primary);
+      background: rgba(56, 189, 248, 0.08);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn.primary {
+      color: #020617;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    .btn.secondary {
+      color: var(--text);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .profile-card {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #020617;
+      font-size: 56px;
+      font-weight: 900;
+      border: 6px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .profile-card h2 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      padding: 14px 10px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--white);
+      font-size: 22px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      margin-top: 32px;
+    }
+
+    .section-card {
+      padding: 34px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .item {
+      padding: 22px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .item h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills span {
+      padding: 10px 15px;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(56, 189, 248, 0.09);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      font-size: 15px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact a {
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+
+    .contact a:hover {
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      color: var(--muted);
+      text-align: center;
+      padding: 34px 0 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      header {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 32px;
+      }
+
+      .grid,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">thaihq<span>-ns</span></div>
+      <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-card">
+          <div class="tag">👋 Xin chào, chào mừng đến với website của mình</div>
+          <h1>Mình là <span>Hồ Quốc Thái</span></h1>
+          <p class="intro">
+            Mình yêu thích công nghệ, lập trình web, an toàn thông tin và các thử thách CTF.
+            Đây là trang cá nhân dùng để giới thiệu bản thân, kỹ năng và những dự án mình đang thực hiện.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#projects">Xem dự án</a>
+            <a class="btn secondary" href="#contact">Liên hệ với mình</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <div class="avatar">K</div>
+          <h2>Hồ Quốc Thái</h2>
+          <p>Sinh viên yêu thích lập trình và an toàn thông tin</p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Web</strong>
+              <span>HTML/CSS</span>
+            </div>
+            <div class="stat">
+              <strong>CTF</strong>
+              <span>Security</span>
+            </div>
+            <div class="stat">
+              <strong>Git</strong>
+              <span>GitHub</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="about">
+        <div class="section-card">
+          <h2 class="section-title">Giới thiệu</h2>
+          <p class="section-desc">
+            Mình đang học và rèn luyện các kỹ năng về lập trình, thiết kế giao diện website,
+            bảo mật cơ bản và tư duy giải quyết vấn đề. Mục tiêu của mình là xây dựng được
+            nhiều sản phẩm thực tế và phát triển kỹ năng chuyên môn trong lĩnh vực công nghệ.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-card">
+          <h2 class="section-title">Kỹ năng</h2>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>CTF</span>
+            <span>Linux cơ bản</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-card">
+          <h2 class="section-title">Dự án</h2>
+          <p class="section-desc">Một số nội dung mình có thể cập nhật lên website cá nhân.</p>
+
+          <div class="grid">
+            <div class="item">
+              <h3>Portfolio cá nhân</h3>
+              <p>Website giới thiệu bản thân, kỹ năng, thông tin liên hệ và định hướng học tập.</p>
+            </div>
+
+            <div class="item">
+              <h3>Write-up CTF</h3>
+              <p>Tổng hợp các bài phân tích, hướng giải và kinh nghiệm khi làm các thử thách CTF.</p>
+            </div>
+
+            <div class="item">
+              <h3>Project học tập</h3>
+              <p>Các bài tập, sản phẩm nhỏ và dự án cá nhân trong quá trình học công nghệ.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-card">
+          <h2 class="section-title">Liên hệ</h2>
+          <p class="section-desc">Bạn có thể chỉnh lại các đường dẫn bên dưới theo thông tin thật của bạn.</p>
+
+          <div class="contact">
+            <a href="https://github.com/thaihq-ns" target="_blank">GitHub: thaihq-ns</a>
+            <a href="mailto:your-email@gmail.com">Email: your-email@gmail.com</a>
+            <a href="#" target="_blank">Facebook: thêm link của bạn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Ho Quoc Thai. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
