@@ -1028,3 +1028,138 @@ h3 {
     transform: none;
   }
 }
+/* Contact icon buttons */
+.contact-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.contact-icon {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: var(--heading);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--bg-solid) 86%, transparent), color-mix(in srgb, var(--bg-soft) 72%, transparent));
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.contact-icon:hover {
+  transform: translateY(-4px);
+  color: var(--accent);
+  border-color: var(--border-strong);
+  box-shadow: 0 18px 44px color-mix(in srgb, var(--accent-blue) 20%, transparent);
+}
+
+.contact-icon.github:hover {
+  color: #f3f8ff;
+}
+
+.contact-icon.linkedin:hover {
+  color: #38bdf8;
+}
+
+.contact-icon.email:hover {
+  color: var(--accent);
+}
+
+.contact-icon:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 80%, transparent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    text-align: center;
+  }
+
+  .contact-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+  }
+
+  .contact-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+/* Email icon expands to show address on hover */
+.email-expand {
+  position: relative;
+  width: 54px;
+  overflow: hidden;
+  justify-content: flex-start;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.email-expand svg {
+  flex: 0 0 auto;
+  margin-left: 15px;
+}
+
+.email-text {
+  max-width: 0;
+  opacity: 0;
+  transform: translateX(-8px);
+  overflow: hidden;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: currentColor;
+  transition:
+    max-width 0.25s ease,
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+
+.email-expand:hover,
+.email-expand:focus-visible {
+  width: 245px;
+  color: var(--accent);
+}
+
+.email-expand:hover .email-text,
+.email-expand:focus-visible .email-text {
+  max-width: 180px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile: show email below/inside neatly, not overflowing screen */
+@media (max-width: 480px) {
+  .email-expand:hover,
+  .email-expand:focus-visible {
+    width: min(245px, 90vw);
+  }
+
+  .email-text {
+    font-size: 0.86rem;
+  }
+}
