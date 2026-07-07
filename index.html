@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ho Quoc Thai - Network Security Student, SOC Analyst in Training, CTF Player. Cybersecurity portfolio for SOC analysis, threat detection, digital forensics, CTF write-ups, and practical labs." />
-  <meta name="author" content="Ho Quoc Thai" />
+  <meta name="description" content="Quoc Thai - Network Security Student, SOC Analyst in Training, CTF Player. Cybersecurity portfolio for SOC analysis, threat detection, digital forensics, CTF write-ups, and practical labs." />
+  <meta name="author" content="Quoc Thai" />
   <meta name="theme-color" content="#071018" />
-  <title>Ho Quoc Thai | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Quoc Thai | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
+  <div class="security-bg-icons" aria-hidden="true"></div>
+
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header" id="top">
     <nav class="navbar container" aria-label="Main navigation">
-      <a href="#top" class="logo" aria-label="Ho Quoc Thai home">
-        <span class="logo-mark">HQT</span>
-        <span class="logo-text">Ho Quoc Thai</span>
+      <a href="#top" class="logo" aria-label="Quoc Thai home">
+        <span class="logo-text cyber-logo-name" data-text="H0_QU0C//THAI">
+        <span class="cyber-name-main">H0_QU0C</span>
+        <span class="cyber-name-separator">//</span>
+        <span class="cyber-name-main">THAI</span>
+      </span>
       </a>
 
       <div class="nav-actions" aria-label="Display controls">
         <button class="control-btn theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
           <span class="theme-icon" aria-hidden="true">☾</span>
           <span class="theme-text" data-i18n="control.themeDark">Dark</span>
-        </button>
-
-        <button class="control-btn lang-toggle" type="button" aria-label="Switch language" aria-pressed="false">
-          <span class="lang-current">EN</span>
         </button>
       </div>
 
@@ -44,6 +45,11 @@
         <li><a href="#notes" data-i18n="nav.notes">Notes</a></li>
         <li><a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a></li>
         <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
+        <li class="nav-lang-item nav-cta-right">
+          <button class="control-btn lang-toggle" type="button" aria-label="Switch to Vietnamese" aria-pressed="false">
+            <img class="lang-flag" src="assets/flags/gb.svg" alt="English flag" />
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -51,13 +57,71 @@
   <main id="main-content">
     <section class="hero section-padding" aria-labelledby="hero-title">
       <div class="container hero-grid">
+        <div class="hero-portrait reveal">
+          <div class="hero-portrait-deco" aria-hidden="true">
+            <span class="deco-badge deco-1" title="shield">
+              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-2.9 8.8-7 10-4.1-1.2-7-5.4-7-10V6l7-3z"></path><path d="M9.5 12l1.6 1.6 3.6-4"></path></svg>
+            </span>
+            <span class="deco-badge deco-2" title="lock">
+              <svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+            </span>
+            <span class="deco-badge deco-3" title="terminal">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10l3 2-3 2"></path><path d="M13 15h4"></path></svg>
+            </span>
+            <span class="deco-badge deco-4" title="network">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2"></circle><circle cx="18" cy="7" r="2"></circle><circle cx="12" cy="17" r="2"></circle><path d="M8 8l3 7"></path><path d="M16 8l-3 7"></path><path d="M8 7h8"></path></svg>
+            </span>
+            <span class="deco-tag deco-5">0x1F</span>
+            <span class="deco-tag deco-6">&lt;/&gt;</span>
+          </div>
+
+          <div class="hero-photo-frame">
+            <img
+              src="assets/avatar.jpg"
+              alt="Ho Quoc Thai portrait"
+              class="hero-photo"
+            />
+          </div>
+
+          <p class="hero-signature" aria-hidden="true">c10v3</p>
+
+          <blockquote class="hero-quote">
+            <span class="quote-mark" aria-hidden="true">&#8220;</span>
+            <p data-i18n="hero.quote">No system is unbreakable — only unexplored.</p>
+          </blockquote>
+        </div>
+
         <div class="hero-content reveal">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Cybersecurity Portfolio</p>
-          <h1 id="hero-title" data-i18n-html="hero.title">Hi, I'm <span>Ho Quoc Thai</span></h1>
-          <h2 data-i18n="hero.role">Network Security Student | CTF Player</h2>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Hi, this is</p>
+          <h1 id="hero-title" data-i18n="hero.name">Quoc Thai</h1>
+          <h2 data-i18n="hero.role">Network Security Student | SOC Analyst in Training | CTF Player</h2>
+
+          <span class="hero-divider" aria-hidden="true"></span>
+
           <p class="hero-description" data-i18n="hero.description">
             I am a cybersecurity learner focusing on SOC analysis, log investigation, threat detection, and hands-on security labs.
           </p>
+          <p class="hero-description" data-i18n="hero.description2">
+            I like to document what I learn along the way: small experiments, CTF write-ups, and the occasional late-night debugging session.
+          </p>
+
+          <div class="hero-social" aria-label="Social links">
+            <a href="https://github.com/thaihq-ns" target="_blank" rel="noopener noreferrer" class="contact-icon github" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.07 0 0 .98-.31 3.2 1.19A11.1 11.1 0 0 1 12 5.95c.99 0 1.99.13 2.92.39 2.22-1.5 3.2-1.19 3.2-1.19.63 1.6.23 2.78.11 3.07.75.81 1.2 1.85 1.2 3.11 0 4.43-2.7 5.4-5.27 5.69.42.36.79 1.07.79 2.16v3.21c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ho-quoc-thai-50a1a43ab/" target="_blank" rel="noopener noreferrer" class="contact-icon linkedin" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.49 6S0 4.88 0 3.5 1.12 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zm7.5 0h3.84v2.18h.05C12.42 9.17 13.73 8 15.68 8c4.06 0 4.82 2.67 4.82 6.14V24h-4v-8.75c0-2.09-.04-4.77-2.91-4.77-2.91 0-3.36 2.27-3.36 4.62V24h-4V8z"/>
+              </svg>
+            </a>
+            <a href="mailto:thaihq.23ns@vku.udn.vn" class="contact-icon email" aria-label="Email: thaihq.23ns@vku.udn.vn" title="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.22l9 5.63 9-5.63V7H3zm18 10V9.58l-8.47 5.29a1 1 0 0 1-1.06 0L3 9.58V17h18z"/>
+              </svg>
+            </a>
+          </div>
 
           <div class="hero-actions" aria-label="Primary actions">
             <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
@@ -79,22 +143,6 @@
             </div>
           </div>
         </div>
-
-        <aside class="terminal-card reveal" aria-label="Terminal style cybersecurity activity log">
-          <div class="terminal-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="terminal-title">soc-lab@portfolio:~</span>
-          </div>
-          <div class="terminal-body">
-            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line1">Analyzing logs...</span></p>
-            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line2">Mapping alerts to MITRE ATT&CK...</span></p>
-            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line3">Investigating suspicious PowerShell activity...</span></p>
-            <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line4">Building detection rules...</span></p>
-            <p class="cursor-line"><span class="prompt">&gt;</span> <span id="typing-text">Monitoring suspicious events</span><span class="cursor">_</span></p>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -102,7 +150,11 @@
       <div class="container two-column">
         <div class="section-heading reveal">
           <p class="eyebrow" data-i18n="about.eyebrow">About</p>
-           <img src="assets/avatar.jpg" alt="Ho Quoc Thai profile photo">
+             <img
+              src="assets/avatar.jpg"
+              alt="Ho Quoc Thai profile photo"
+              class="about-photo"
+            />
         </div>
 
         <div class="about-content reveal">
@@ -119,68 +171,277 @@
             <span data-i18n="about.tag3">Digital Forensics</span>
             <span data-i18n="about.tag4">Security Labs</span>
           </div>
+
+          <aside class="terminal-card reveal about-terminal" aria-label="Terminal style cybersecurity activity log">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="terminal-title">soc-lab@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line1">Analyzing logs...</span></p>
+              <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line2">Mapping alerts to MITRE ATT&CK...</span></p>
+              <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line3">Investigating suspicious PowerShell activity...</span></p>
+              <p><span class="prompt">&gt;</span> <span data-i18n="terminal.line4">Building detection rules...</span></p>
+              <p class="cursor-line"><span class="prompt">&gt;</span> <span id="typing-text">Monitoring suspicious events</span><span class="cursor">_</span></p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="skills section-padding" id="skills" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section-heading centered reveal">
+        <div class="section-heading centered reveal skills-heading-pro">
           <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
           <h2 id="skills-title" data-i18n="skills.title">Technical skill areas</h2>
           <p data-i18n="skills.subtitle">Organized around SOC work, operating system fundamentals, security practice, and tools.</p>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <div class="card-icon">01</div>
-            <h3 data-i18n="skills.socTitle">SOC & Blue Team</h3>
-            <ul>
-              <li data-i18n="skills.soc1">Log analysis</li>
-              <li data-i18n="skills.soc2">Alert triage</li>
-              <li data-i18n="skills.soc3">Incident investigation</li>
-              <li>Wazuh SIEM</li>
-              <li>MITRE ATT&amp;CK</li>
-              <li>IOC analysis</li>
-              <li data-i18n="skills.soc7">Detection logic</li>
-            </ul>
-          </article>
+        <div class="skills-file skill-command-center reveal" role="group" aria-label="Professional cybersecurity skills dashboard">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">~/portfolio/skills.workspace</span>
+          </div>
 
-          <article class="skill-card reveal">
-            <div class="card-icon">02</div>
-            <h3 data-i18n="skills.osTitle">Operating Systems</h3>
-            <ul>
-              <li data-i18n="skills.os1">Windows logs</li>
-              <li data-i18n="skills.os2">Linux logs</li>
-              <li data-i18n="skills.os3">PowerShell basics</li>
-              <li data-i18n="skills.os4">Bash basics</li>
-            </ul>
-          </article>
+          <div class="skill-command-grid">
+            <aside class="skill-command-nav" aria-label="Skills workspace menu">
+              <button class="skill-mode-tab active" type="button" data-skill-mode="capabilities">
+                <span class="mode-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+                </span>
+                <span>
+                  <strong>CAPABILITIES</strong>
+                  <small>Skill map</small>
+                </span>
+              </button>
 
-          <article class="skill-card reveal">
-            <div class="card-icon">03</div>
-            <h3 data-i18n="skills.practiceTitle">Security Practice</h3>
-            <ul>
-              <li>OSINT</li>
-              <li data-i18n="skills.practice2">Digital forensics</li>
-              <li data-i18n="skills.practice3">Web security testing</li>
-              <li data-i18n="skills.practice4">Basic malware analysis</li>
-              <li data-i18n="skills.practice5">CTF problem solving</li>
-            </ul>
-          </article>
+              <button class="skill-mode-tab" type="button" data-skill-mode="tools">
+                <span class="mode-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18v3h3l6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-3-3 2.4-2.4z"></path></svg>
+                </span>
+                <span>
+                  <strong>TOOLBOX</strong>
+                  <small>Workflow tools</small>
+                </span>
+              </button>
+            </aside>
 
-          <article class="skill-card reveal">
-            <div class="card-icon">04</div>
-            <h3 data-i18n="skills.toolsTitle">Tools</h3>
-            <ul>
-              <li>Wazuh</li>
-              <li>Burp Suite</li>
-              <li>Nmap</li>
-              <li>Wireshark</li>
-              <li>Linux CLI</li>
-              <li>GitHub</li>
-            </ul>
-          </article>
+            <div class="skill-main-stage">
+              <section class="skill-mode-panel active" data-skill-panel="capabilities">
+                <div class="stage-header">
+                  <span class="stage-index">01</span>
+                  <div>
+                    <h3>Capability map</h3>
+                    <p>Compact overview of core security skills, evidence, and related technologies.</p>
+                  </div>
+                </div>
+
+                <div class="capability-board-pro">
+                  <article class="capability-unit" data-tech-targets="wazuh mitre wireshark">
+                    <div class="unit-icon soc" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+                    </div>
+                    <div class="unit-body">
+                      <div class="unit-title-row">
+                        <h4>SOC &amp; Blue Team</h4>
+                        <span class="level-badge intermediate">Intermediate</span>
+                      </div>
+                      <p>Alert triage, log review, IOC validation, MITRE mapping.</p>
+                      <div class="unit-evidence">
+                        <span>Wazuh labs</span>
+                        <span>Detection notes</span>
+                        <span>Incident reports</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="capability-unit" data-tech-targets="windows linux bash">
+                    <div class="unit-icon os" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"></rect><path d="M8 9h8M8 13h8M8 17h4"></path></svg>
+                    </div>
+                    <div class="unit-body">
+                      <div class="unit-title-row">
+                        <h4>Operating Systems</h4>
+                        <span class="level-badge intermediate">Intermediate</span>
+                      </div>
+                      <p>Windows/Linux log reading, shell workflow, service inspection.</p>
+                      <div class="unit-evidence">
+                        <span>Event logs</span>
+                        <span>Linux CLI</span>
+                        <span>Shell basics</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="capability-unit" data-tech-targets="osint burp malware mitre">
+                    <div class="unit-icon practice" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.1-2.6 7.9-7 9-4.4-1.1-7-4.9-7-9V7l7-4z"></path><path d="M9 12l2 2 4-5"></path></svg>
+                    </div>
+                    <div class="unit-body">
+                      <div class="unit-title-row">
+                        <h4>Security Practice</h4>
+                        <span class="level-badge learning">Learning</span>
+                      </div>
+                      <p>OSINT, web testing, malware behavior notes, CTF methodology.</p>
+                      <div class="unit-evidence">
+                        <span>CTF write-ups</span>
+                        <span>OSINT notes</span>
+                        <span>Web labs</span>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="capability-unit" data-tech-targets="nmap wireshark wazuh burp linux">
+                    <div class="unit-icon tool" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M10 3h4l1 4 3 1.5-2 3 1 3.5-3.5.5L11 19l-2.5-3.5L5 15l1-3.5-2-3L7 7l3-4z"></path><circle cx="12" cy="11" r="2.5"></circle></svg>
+                    </div>
+                    <div class="unit-body">
+                      <div class="unit-title-row">
+                        <h4>Investigation Workflow</h4>
+                        <span class="level-badge proficient">Proficient</span>
+                      </div>
+                      <p>Discovery, packet review, SIEM context, practical reporting.</p>
+                      <div class="unit-evidence">
+                        <span>Recon</span>
+                        <span>Traffic analysis</span>
+                        <span>Report writing</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section class="skill-mode-panel" data-skill-panel="tools">
+                <div class="stage-header">
+                  <span class="stage-index">02</span>
+                  <div>
+                    <h3>Toolbox matrix</h3>
+                    <p>Tools arranged by investigation workflow instead of text-heavy lists.</p>
+                  </div>
+                </div>
+
+                <div class="workflow-strip" aria-label="Security workflow">
+                  <span>Discover</span>
+                  <i></i>
+                  <span>Capture</span>
+                  <i></i>
+                  <span>Detect</span>
+                  <i></i>
+                  <span>Report</span>
+                </div>
+
+                <div class="tool-matrix-pro">
+                  <article class="tool-tile-pro" data-tech-targets="nmap">
+                    <img src="assets/tech/nmap.jpg" alt="Nmap" loading="lazy">
+                    <div>
+                      <strong>Nmap</strong>
+                      <span>Discovery</span>
+                    </div>
+                  </article>
+
+                  <article class="tool-tile-pro" data-tech-targets="wireshark">
+                    <img src="assets/tech/wireshark.png" alt="Wireshark" loading="lazy">
+                    <div>
+                      <strong>Wireshark</strong>
+                      <span>Packets</span>
+                    </div>
+                  </article>
+
+                  <article class="tool-tile-pro" data-tech-targets="wazuh">
+                    <img src="assets/tech/wazuh.png" alt="Wazuh" loading="lazy">
+                    <div>
+                      <strong>Wazuh</strong>
+                      <span>SIEM</span>
+                    </div>
+                  </article>
+
+                  <article class="tool-tile-pro" data-tech-targets="burp">
+                    <img src="assets/tech/burpsuite.png" alt="Burp Suite" loading="lazy">
+                    <div>
+                      <strong>Burp Suite</strong>
+                      <span>Web</span>
+                    </div>
+                  </article>
+
+                  <article class="tool-tile-pro" data-tech-targets="linux bash">
+                    <img src="assets/tech/bash.png" alt="Linux CLI" loading="lazy">
+                    <div>
+                      <strong>Linux CLI</strong>
+                      <span>Shell</span>
+                    </div>
+                  </article>
+
+                  <article class="tool-tile-pro" data-tech-targets="mitre">
+                    <img src="assets/tech/MITRE-ATTCK-la-gi.jpeg" alt="MITRE ATT&CK" loading="lazy">
+                    <div>
+                      <strong>MITRE</strong>
+                      <span>Mapping</span>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="tool-metrics-pro" aria-label="Tool usage summary">
+                  <div><strong>06</strong><span>Core tools</span></div>
+                  <div><strong>04</strong><span>Workflows</span></div>
+                  <div><strong>Labs</strong><span>Evidence based</span></div>
+                </div>
+              </section>
+            </div>
+
+            <aside class="technology-stack-pro" aria-label="Technology stack">
+              <div class="stack-pro-header">
+                <p>Technology Stack</p>
+                <span>visual map</span>
+              </div>
+
+              <div class="tech-orbit-grid">
+                <figure class="tech-orb" data-tech-card="wazuh">
+                  <img src="assets/tech/wazuh.png" alt="Wazuh" loading="lazy">
+                  <figcaption>Wazuh</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="mitre">
+                  <img src="assets/tech/MITRE-ATTCK-la-gi.jpeg" alt="MITRE ATT&CK" loading="lazy">
+                  <figcaption>MITRE</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="windows">
+                  <img src="assets/tech/window.webp" alt="Windows" loading="lazy">
+                  <figcaption>Windows</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="linux">
+                  <img src="assets/tech/linux.jpg" alt="Linux" loading="lazy">
+                  <figcaption>Linux</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="bash">
+                  <img src="assets/tech/bash.png" alt="Bash" loading="lazy">
+                  <figcaption>Bash</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="burp">
+                  <img src="assets/tech/burpsuite.png" alt="Burp Suite" loading="lazy">
+                  <figcaption>Burp</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="nmap">
+                  <img src="assets/tech/nmap.jpg" alt="Nmap" loading="lazy">
+                  <figcaption>Nmap</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="wireshark">
+                  <img src="assets/tech/wireshark.png" alt="Wireshark" loading="lazy">
+                  <figcaption>Wireshark</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="osint">
+                  <img src="assets/tech/osint.png" alt="OSINT" loading="lazy">
+                  <figcaption>OSINT</figcaption>
+                </figure>
+                <figure class="tech-orb" data-tech-card="malware">
+                  <img src="assets/tech/malware.png" alt="Malware analysis" loading="lazy">
+                  <figcaption>Malware</figcaption>
+                </figure>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
@@ -194,65 +455,86 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-topline">
-              <span class="status-dot"></span>
-              <span data-i18n="projects.p1Type">Blue Team Lab</span>
-            </div>
-            <h3 data-i18n="projects.p1Title">SOC Alert Investigation Lab</h3>
-            <p data-i18n="projects.p1Desc">A hands-on lab focused on analyzing security alerts, reviewing logs, identifying suspicious behavior, and classifying alerts as false positive or true positive.</p>
-            <div class="tags">
-              <span>SOC</span>
-              <span>Wazuh</span>
-              <span>Log Analysis</span>
-              <span>MITRE ATT&amp;CK</span>
-            </div>
-          </article>
+  <article class="project-card reveal">
+    <div class="project-topline">
+      <span class="status-dot"></span>
+      <span data-i18n="projects.p1Type">Infrastructure Project</span>
+    </div>
+    <h3 data-i18n="projects.p1Title">
+      Designing and Implementing High Availability (HA) Solutions for Network Services on Windows Server 2019
+    </h3>
+    <p data-i18n="projects.p1Desc">
+      Designed and implemented a high availability solution for Windows Server 2019 network services, focusing on redundancy, continuity, and resilient service deployment.
+    </p>
+    <p class="project-period">02/2026 - 05/2026</p>
+    <div class="tags">
+      <span>Windows Server</span>
+      <span>High Availability</span>
+      <span>Failover</span>
+      <span>Network Services</span>
+    </div>
+  </article>
 
-          <article class="project-card reveal">
-            <div class="project-topline">
-              <span class="status-dot"></span>
-              <span data-i18n="projects.p2Type">Windows Security</span>
-            </div>
-            <h3 data-i18n="projects.p2Title">Windows Log Analysis with Sysmon</h3>
-            <p data-i18n="projects.p2Desc">A practical project for collecting and analyzing Windows event logs using Sysmon to detect suspicious PowerShell execution, process creation, and file activity.</p>
-            <div class="tags">
-              <span>Windows Security</span>
-              <span>PowerShell</span>
-              <span>Threat Detection</span>
-            </div>
-          </article>
+  <article class="project-card reveal">
+    <div class="project-topline">
+      <span class="status-dot"></span>
+      <span data-i18n="projects.p2Type">System Security</span>
+    </div>
+    <h3 data-i18n="projects.p2Title">
+      Deploying and Evaluating the Security of a Linux System Using Lynis
+    </h3>
+    <p data-i18n="projects.p2Desc">
+      Deployed a Linux environment and used Lynis to audit, assess, and improve system security through hardening and configuration review.
+    </p>
+    <p class="project-period">01/2026 - 05/2026</p>
+    <div class="tags">
+      <span>Linux Security</span>
+      <span>Lynis</span>
+      <span>Hardening</span>
+      <span>Audit</span>
+    </div>
+  </article>
 
-          <article class="project-card reveal">
-            <div class="project-topline">
-              <span class="status-dot"></span>
-              <span data-i18n="projects.p3Type">Documentation</span>
-            </div>
-            <h3 data-i18n="projects.p3Title">CTF Write-ups Collection</h3>
-            <p data-i18n="projects.p3Desc">A collection of CTF write-ups covering web exploitation, forensics, OSINT, reversing basics, and security problem-solving methodology.</p>
-            <div class="tags">
-              <span>CTF</span>
-              <span>Web Security</span>
-              <span>Forensics</span>
-              <span>OSINT</span>
-            </div>
-          </article>
+  <article class="project-card reveal">
+    <div class="project-topline">
+      <span class="status-dot"></span>
+      <span data-i18n="projects.p3Type">Monitoring Project</span>
+    </div>
+    <h3 data-i18n="projects.p3Title">
+      Designing and Implementing a Network Monitoring System with LibreNMS
+    </h3>
+    <p data-i18n="projects.p3Desc">
+      Built a network monitoring system using LibreNMS to observe device health, network availability, and operational status in a centralized dashboard.
+    </p>
+    <p class="project-period">01/2026 - 05/2026</p>
+    <div class="tags">
+      <span>LibreNMS</span>
+      <span>Monitoring</span>
+      <span>SNMP</span>
+      <span>Observability</span>
+    </div>
+  </article>
 
-          <article class="project-card reveal">
-            <div class="project-topline">
-              <span class="status-dot"></span>
-              <span data-i18n="projects.p4Type">Malware Basics</span>
-            </div>
-            <h3 data-i18n="projects.p4Title">Malware Behavior Analysis Notes</h3>
-            <p data-i18n="projects.p4Desc">Basic malware analysis notes documenting suspicious behaviors such as persistence, registry modification, command execution, and network indicators.</p>
-            <div class="tags">
-              <span>Malware Analysis</span>
-              <span>IOC</span>
-              <span>Registry</span>
-              <span>Sandbox</span>
-            </div>
-          </article>
-        </div>
+  <article class="project-card reveal">
+    <div class="project-topline">
+      <span class="status-dot"></span>
+      <span data-i18n="projects.p4Type">Detection Project</span>
+    </div>
+    <h3 data-i18n="projects.p4Title">
+      Design and Implementation of an AI-Based Network Intrusion Detection System Using pfSense Firewall and ELK Stack
+    </h3>
+    <p data-i18n="projects.p4Desc">
+      Designed an intrusion detection workflow combining pfSense and the ELK Stack to collect, analyze, and visualize network security events for anomaly detection.
+    </p>
+    <p class="project-period">10/2025 - 01/2026</p>
+    <div class="tags">
+      <span>pfSense</span>
+      <span>ELK Stack</span>
+      <span>IDS</span>
+      <span>Network Security</span>
+    </div>
+  </article>
+</div>
       </div>
     </section>
 
@@ -264,82 +546,323 @@
           <p data-i18n="writeups.subtitle">Blog-style cards for documenting the problem, evidence, exploitation path, and lessons learned.</p>
         </div>
 
-        <div class="writeup-grid">
-          <article class="writeup-card reveal">
-            <span class="category" data-i18n="writeups.c1Cat">Web Exploitation</span>
-            <h3 data-i18n="writeups.c1Title">File Upload Vulnerability Lab</h3>
-            <p class="difficulty" data-i18n="writeups.easy">Difficulty: Easy</p>
-            <p data-i18n="writeups.c1Desc">Analyzing weak upload validation, identifying execution paths, and documenting controlled exploitation steps.</p>
-            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
-          </article>
+        <div class="writeup-terminal reveal" aria-label="CTF write-up terminal list">
+  <div class="writeup-terminal-bg" aria-hidden="true">
+    <p>ctf@hackerlab:~/writeups$ cat CTF_WRITEUPS.log</p>
+    <p>[INFO] Starting scan...</p>
+    <p>[INFO] Parsing challenge evidence...</p>
+    <p>syslog mackor:732041: [bileup.]</p>
+    <p>0x0000 00 02 51 04 05 06 11 11</p>
+    <p>0x0010 00 00 14 02 01 04 07 0A</p>
+    <p>SHA256: ...36a4374a2a79c2582700b081325af3b7020bc00</p>
+  </div>
 
-          <article class="writeup-card reveal">
-            <span class="category" data-i18n="writeups.c2Cat">Digital Forensics</span>
-            <h3 data-i18n="writeups.c2Title">Windows Registry Investigation</h3>
-            <p class="difficulty" data-i18n="writeups.medium">Difficulty: Medium</p>
-            <p data-i18n="writeups.c2Desc">Reviewing registry artifacts, deleted traces, persistence indicators, and evidence extraction workflow.</p>
-            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
-          </article>
+  <div class="writeup-terminal-window">
+  <div class="writeup-card-topbar">
+    <span class="topbar-dot red"></span>
+    <span class="topbar-dot yellow"></span>
+    <span class="topbar-dot green"></span>
+    <span class="topbar-title">~/writeups/CTF_WRITEUPS.log</span>
+  </div>
+    <div class="writeup-shell-line">
+      <span class="shell-user">ctf@hackerlab</span><span>:</span><span class="shell-path">~/writeups</span><span>$</span>
+      <strong>cat CTF_WRITEUPS.log</strong>
+    </div>
 
-          <article class="writeup-card reveal">
-            <span class="category">OSINT</span>
-            <h3 data-i18n="writeups.c3Title">Public Source Investigation</h3>
-            <p class="difficulty" data-i18n="writeups.easy">Difficulty: Easy</p>
-            <p data-i18n="writeups.c3Desc">Using public metadata, visible clues, and structured search methods without crossing privacy boundaries.</p>
-            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
-          </article>
-
-          <article class="writeup-card reveal">
-            <span class="category" data-i18n="writeups.c4Cat">Reverse Engineering</span>
-            <h3 data-i18n="writeups.c4Title">Basic Binary Analysis</h3>
-            <p class="difficulty" data-i18n="writeups.medium">Difficulty: Medium</p>
-            <p data-i18n="writeups.c4Desc">Reading program behavior, identifying strings, checking file formats, and building a repeatable analysis process.</p>
-            <a href="#contact" class="read-more" data-i18n="writeups.readMore">Read more</a>
-          </article>
+    <div class="writeup-log-table">
+      <article class="writeup-log-row">
+        <div class="writeup-log-left">
+          <div class="request-id">
+            <span class="req-icon">▣</span>
+            <strong>[REQ-01: FILE_VULNERABILITY]</strong>
+          </div>
+          <p>Type: <span class="type-badge web" data-i18n="writeups.c1Cat">Web Exploitation</span></p>
         </div>
+
+        <div class="writeup-log-main">
+          <h3 data-i18n="writeups.c1Title">File Upload Vulnerability Lab</h3>
+          <p data-i18n="writeups.c1Desc">
+            Analyzing weak upload validation, identifying execution paths, and documenting controlled exploitation steps.
+          </p>
+        </div>
+
+        <a
+          href="https://github.com/thaihq-ns/ctf-writeups"
+          class="execute-btn execute-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open File Upload Vulnerability write-up"
+        >
+          <span class="execute-status"></span>
+          <span class="execute-text">Execute: writeup.sh</span>
+          <span class="execute-arrow">→</span>
+        </a>
+      </article>
+
+      <article class="writeup-log-row">
+        <div class="writeup-log-left">
+          <div class="request-id">
+            <span class="req-icon">▤</span>
+            <strong>[REQ-02: REGISTRY_INVEST]</strong>
+          </div>
+          <p>Type: <span class="type-badge forensics" data-i18n="writeups.c2Cat">Digital Forensics</span></p>
+        </div>
+
+        <div class="writeup-log-main">
+          <h3 data-i18n="writeups.c2Title">Windows Registry Investigation</h3>
+          <p data-i18n="writeups.c2Desc">
+            Reviewing registry artifacts, deleted traces, persistence indicators, and evidence extraction workflow.
+          </p>
+        </div>
+
+        <a
+          href="https://github.com/thaihq-ns/ctf-writeups"
+          class="execute-btn execute-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Windows Registry Investigation write-up"
+        >
+          <span class="execute-status"></span>
+          <span class="execute-text">Execute: writeup.sh</span>
+          <span class="execute-arrow">→</span>
+        </a>
+      </article>
+
+      <article class="writeup-log-row">
+        <div class="writeup-log-left">
+          <div class="request-id">
+            <span class="req-icon">⌕</span>
+            <strong>[REQ-03: OSINT_SEARCH]</strong>
+          </div>
+          <p>Type: <span class="type-badge osint">OSINT</span></p>
+        </div>
+
+        <div class="writeup-log-main">
+          <h3 data-i18n="writeups.c3Title">Public Source Investigation</h3>
+          <p data-i18n="writeups.c3Desc">
+            Using public metadata, visible clues, and structured search methods without crossing privacy boundaries.
+          </p>
+        </div>
+
+        <a
+          href="https://github.com/thaihq-ns/ctf-writeups"
+          class="execute-btn execute-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open OSINT Investigation write-up"
+        >
+          <span class="execute-status"></span>
+          <span class="execute-text">Execute: osint_lookup.sh</span>
+          <span class="execute-arrow">→</span>
+        </a>
+      </article>
+
+      <article class="writeup-log-row">
+        <div class="writeup-log-left">
+          <div class="request-id">
+            <span class="req-icon">◈</span>
+            <strong>[REQ-04: BINARY_ANALYSIS]</strong>
+          </div>
+          <p>Type: <span class="type-badge reverse" data-i18n="writeups.c4Cat">Reverse Engineering</span></p>
+        </div>
+
+        <div class="writeup-log-main">
+          <h3 data-i18n="writeups.c4Title">Basic Binary Analysis</h3>
+          <p data-i18n="writeups.c4Desc">
+            Reading program behavior, identifying strings, checking file formats, and building a repeatable analysis process.
+          </p>
+        </div>
+
+       <a
+          href="https://github.com/thaihq-ns/ctf-writeups"
+          class="execute-btn execute-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Basic Binary Analysis write-up"
+        >
+          <span class="execute-status"></span>
+          <span class="execute-text">Execute: binary_disasm.exe</span>
+          <span class="execute-arrow">→</span>
+        </a>
+    </div>
+
+    <div class="writeup-shell-footer">
+      <span class="shell-user">ctf@hackerlab</span><span>:</span><span class="shell-path">~/writeups</span><span>$</span>
+      <span class="terminal-cursor"></span>
+    </div>
+  </div>
+</div>
       </div>
     </section>
 
-    <section class="notes section-padding" id="notes" aria-labelledby="notes-title">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="notes.eyebrow">Security Notes</p>
-          <h2 id="notes-title" data-i18n="notes.title">Short technical references</h2>
-          <p data-i18n="notes.subtitle">Concise notes for concepts, commands, detection logic, and investigation workflows.</p>
-        </div>
+    <section class="notes section-padding threat-intel-section" id="notes" aria-labelledby="notes-title">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">GHI CHÚ BẢO MẬT</p>
+      <h2 id="notes-title">Bản đồ cảnh báo an ninh mạng</h2>
+      <p>
+        Mỗi điểm đỏ đại diện cho một bài viết, lỗ hổng bảo mật hoặc sự kiện tấn công đáng chú ý.
+        Nhấp vào cảnh báo để xem chi tiết phân tích.
+      </p>
+    </div>
 
-        <div class="notes-grid">
-          <article class="note-card reveal"><span>01</span><h3 data-i18n="notes.n1">PowerShell suspicious behavior</h3></article>
-          <article class="note-card reveal"><span>02</span><h3 data-i18n="notes.n2">WMI Event Subscription</h3></article>
-          <article class="note-card reveal"><span>03</span><h3 data-i18n="notes.n3">PsExec-like remote execution</h3></article>
-          <article class="note-card reveal"><span>04</span><h3 data-i18n="notes.n4">Registry persistence</h3></article>
-          <article class="note-card reveal"><span>05</span><h3 data-i18n="notes.n5">Wazuh decoder and rule writing</h3></article>
-          <article class="note-card reveal"><span>06</span><h3 data-i18n="notes.n6">MITRE ATT&CK mapping</h3></article>
-          <article class="note-card reveal"><span>07</span><h3 data-i18n="notes.n7">IOC investigation workflow</h3></article>
+    <div class="intel-board reveal threat-map-only">
+  <div class="intel-map-card">
+    <div class="intel-card-topbar">
+      <span class="topbar-dot red"></span>
+      <span class="topbar-dot yellow"></span>
+      <span class="topbar-dot green"></span>
+      <span class="topbar-title">~/threat_ops/global_alerts.conf</span>
+    </div>
+
+    <div class="globe-stage">
+      <div class="globe-sphere threat-map-stage">
+        <img
+  src="assets/world-map.png"
+  alt=""
+  class="threat-map-image"
+  aria-hidden="true"
+/>
+        <div class="threat-map-vignette" aria-hidden="true"></div>
+        
+
+        <svg class="attack-lines" viewBox="0 0 1000 520" aria-hidden="true">
+          <defs>
+            <filter id="redGlow">
+              <feGaussianBlur stdDeviation="3.2" result="blur"></feGaussianBlur>
+              <feMerge>
+                <feMergeNode in="blur"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+
+      
+        </svg>
+
+        <!-- alert pins -->
+        <button class="threat-pin map-pin pin-us" data-threat="0" aria-label="United States alert"><span></span></button>
+        <button class="threat-pin map-pin pin-br" data-threat="1" aria-label="Brazil alert"><span></span></button>
+        <button class="threat-pin map-pin pin-de" data-threat="2" aria-label="Germany alert"><span></span></button>
+        <button class="threat-pin map-pin pin-ke" data-threat="3" aria-label="Kenya alert"><span></span></button>
+        <button class="threat-pin map-pin pin-jp" data-threat="4" aria-label="Japan alert"><span></span></button>
+        <button class="threat-pin map-pin pin-au" data-threat="5" aria-label="Australia alert"><span></span></button>
+
+        <!-- small ambient sparks -->
+        <span class="threat-spark spark-1"></span>
+        <span class="threat-spark spark-2"></span>
+        <span class="threat-spark spark-3"></span>
+        <span class="threat-spark spark-4"></span>
+        <span class="threat-spark spark-5"></span>
+        <span class="threat-spark spark-6"></span>
+        <span class="threat-spark spark-7"></span>
+        <span class="threat-spark spark-8"></span>
+        <span class="threat-spark spark-9"></span>
+        <span class="threat-spark spark-10"></span>
+
+        <!-- connector line -->
+        <div class="threat-connector" id="threatConnector"></div>
+
+        <!-- floating popup -->
+        <div class="threat-hover-card" id="threatHoverCard">
+          <div class="hover-card-head">
+            <span class="hover-severity" id="hoverSeverity">Critical</span>
+            <span class="hover-region" id="hoverRegion">United States</span>
+          </div>
+
+          <span class="hover-category" id="hoverCategory">Web Exploitation</span>
+          <h3 id="hoverTitle">Critical file transfer vulnerability exploitation</h3>
+          <p id="hoverSummary">
+            Large-scale exploitation of a file transfer platform vulnerability led to widespread incident response.
+          </p>
+
+          <div class="hover-meta">
+            <span id="hoverDate">May 2023</span>
+            <span id="hoverCVE">CVE-2023-34362</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="roadmap section-padding" id="roadmap" aria-labelledby="roadmap-title">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow" data-i18n="roadmap.eyebrow">Learning Roadmap</p>
-          <h2 id="roadmap-title" data-i18n="roadmap.title">Cybersecurity learning path</h2>
-          <p data-i18n="roadmap.subtitle">A practical path toward SOC analysis, detection engineering fundamentals, and stronger portfolio documentation.</p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item reveal"><span>01</span><p data-i18n="roadmap.s1">Networking fundamentals</p></article>
-          <article class="timeline-item reveal"><span>02</span><p data-i18n="roadmap.s2">Linux and Windows fundamentals</p></article>
-          <article class="timeline-item reveal"><span>03</span><p data-i18n="roadmap.s3">Log analysis and SIEM basics</p></article>
-          <article class="timeline-item reveal"><span>04</span><p data-i18n="roadmap.s4">SOC alert triage</p></article>
-          <article class="timeline-item reveal"><span>05</span><p data-i18n="roadmap.s5">MITRE ATT&CK and threat detection</p></article>
-          <article class="timeline-item reveal"><span>06</span><p data-i18n="roadmap.s6">Digital forensics and malware basics</p></article>
-          <article class="timeline-item reveal"><span>07</span><p data-i18n="roadmap.s7">CTF practice and project documentation</p></article>
-          <article class="timeline-item reveal"><span>08</span><p data-i18n="roadmap.s8">Build a strong SOC Analyst portfolio</p></article>
-        </div>
+      <div class="intel-mini-legend">
+        <span><i></i> Active alert node</span>
+        <span><b></b> Hover to inspect incident</span>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
+</section>
+
+        <section class="roadmap section-padding roadmap-cyber" id="roadmap" aria-labelledby="roadmap-title">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow" data-i18n="roadmap.eyebrow">Learning Roadmap</p>
+            <h2 id="roadmap-title" data-i18n="roadmap.title">Cybersecurity learning path</h2>
+            <p data-i18n="roadmap.subtitle">
+              A practical path toward SOC analysis, detection engineering fundamentals, and stronger portfolio documentation.
+            </p>
+          </div>
+
+          <div class="roadmap-panel reveal" aria-label="Cybersecurity learning roadmap">
+            <div class="roadmap-grid">
+              <article class="roadmap-node">
+                <div class="roadmap-number">01</div>
+                <div class="roadmap-icon">⌁</div>
+                <h3 data-i18n="roadmap.s1">Networking fundamentals</h3>
+                <p data-i18n="roadmap.s1Desc">TCP/IP, routing, switching, DNS, HTTP, ports and basic network troubleshooting.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">02</div>
+                <div class="roadmap-icon">▣</div>
+                <h3 data-i18n="roadmap.s2">Linux and Windows fundamentals</h3>
+                <p data-i18n="roadmap.s2Desc">Operating system basics, users, services, permissions, logs and command-line workflow.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">03</div>
+                <div class="roadmap-icon">◎</div>
+                <h3 data-i18n="roadmap.s3">Log analysis and SIEM basics</h3>
+                <p data-i18n="roadmap.s3Desc">Collecting, reading and correlating security logs through SIEM investigation workflows.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">04</div>
+                <div class="roadmap-icon">⚠</div>
+                <h3 data-i18n="roadmap.s4">SOC alert triage</h3>
+                <p data-i18n="roadmap.s4Desc">Classifying alerts, reviewing context, reducing false positives and escalating real incidents.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">05</div>
+                <div class="roadmap-icon">≋</div>
+                <h3 data-i18n="roadmap.s5">MITRE ATT&CK and threat detection</h3>
+                <p data-i18n="roadmap.s5Desc">Mapping behavior to tactics and techniques, then improving detection coverage.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">06</div>
+                <div class="roadmap-icon">⌕</div>
+                <h3 data-i18n="roadmap.s6">Digital forensics and malware basics</h3>
+                <p data-i18n="roadmap.s6Desc">Reviewing artifacts, persistence traces, file behavior, suspicious commands and IOCs.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">07</div>
+                <div class="roadmap-icon">⚑</div>
+                <h3 data-i18n="roadmap.s7">CTF practice and project documentation</h3>
+                <p data-i18n="roadmap.s7Desc">Solving challenges, writing reports, documenting evidence and building repeatable notes.</p>
+              </article>
+
+              <article class="roadmap-node">
+                <div class="roadmap-number">08</div>
+                <div class="roadmap-icon">▤</div>
+                <h3 data-i18n="roadmap.s8">Build a strong SOC Analyst portfolio</h3>
+                <p data-i18n="roadmap.s8Desc">Publishing labs, write-ups, detection notes and practical investigation projects.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <section class="contact section-padding" id="contact" aria-labelledby="contact-title">
       <div class="container contact-card reveal">
@@ -400,6 +923,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
